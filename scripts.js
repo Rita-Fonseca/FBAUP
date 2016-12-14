@@ -1,20 +1,17 @@
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
+$(document).ready(function(){
 
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
 
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
+  $(".escola").on("mouseover", function() {
+
+    var bg = $(this).data("src");
+    console.log(bg)
+
+    //mudar background image do body
+    $("body").css({
+      "background-image": "url("+bg+")"
+    })
+
+  })
+
+
+})
