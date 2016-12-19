@@ -21,10 +21,13 @@ a{
     transform: rotate(270deg);
     transform-origin: left top 0px;
     position: fixed;
-    bottom: 20px;
+    bottom: 2%;
     margin-left: 3%;
-    justify-content: space-between;
     width: 35%;
+}
+
+#menu li{
+  margin-left: 25px;
 }
 //mudar a cor do traço no menu
 
@@ -52,41 +55,104 @@ a{
 #line_on_contactos{
   border-bottom: solid 4px #e11e44;}
 
-#up_ing{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+#traducao{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 1%;
+}
+
+#traducao li{
+  margin-left: 5px;
 }
 
 #home {
-  height: 30px;
-  margin-left: 10px;
-  margin-top: 10px;
+  height: 50px;
+  margin-left: 2%;
+  margin-top: 1%;
 }
+
+#overlay {
+    background-image: url(http://img.pandawhale.com/104933-dickbutt-meme-Imgur-dick-butt-yfgk.png);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    background-color: #ff00e0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:9001;
+}
+
  .conteudo {
     margin-left: 40px;
  }
 
- #cursos_lista {
-   margin-left: 30%;
- }
 
- .titulos {
-   font-size: 20px;
-   font-weight: bold;
-   padding: 10px;
-   background-color: #13e1d6;
-   width: 400px;
-   margin-top: 30px;
-   margin-bottom: 20px;
- }
+//cursos
 
-.lista_escola {
+h2 a{
+  font-weight: bold;
+  color: #fff;
+  padding: 5px;
+}
+
+#lic{
+  background-color: $roxo;
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  top: 15%;
+  right: 51%;
+  padding: 10px;
+}
+
+#mes{
+  background-color: $laranja;
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  top: 55%;
+  right: 51%;
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+}
+
+#dou{
+  background-color: $cinza;
+  height: 350px;
+  width: 350px;
+  position: absolute;
+  top: 25%;
+  left: 51%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+#cursos_lista {
+  position: absolute;
+  top: 100%;
   margin-left: 30%;
 }
 
+  //lista de licenciaturas
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #13e1d6;
+  width: 400px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
 
-
+.lista_escola {
+ margin-left: 30%;
+}
 //escola
 
 .escola{

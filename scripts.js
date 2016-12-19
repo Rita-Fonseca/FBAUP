@@ -13,5 +13,20 @@ $(document).ready(function(){
 
   })
 
+  $('#overlay').click(function() {
+    hideOverlay();
+  });
+});
+
+function hideOverlay() {
+  if (!$('#overlay:visible').length)
+    return;
+  $('#overlay').fadeOut();
+}
+
+$(document).bind('mousewheel', function(e) {
+  hideOverlay();
+});
+
 
 })
