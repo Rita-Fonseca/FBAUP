@@ -1,11 +1,48 @@
 @import "variables";
 @import "reset";
 
+//imagem de apresentacao
+#overlay {
+    background-image: url(imagens/inicio.jpg);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: auto;
+    left: auto;
+    z-index:9001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#seta{
+  position: fixed;
+  bottom: 0px;
+  left: 45vw;
+  width: 8vh;
+  padding: 20px;
+}
+#fbaup{
+  width: 35vw;
+}
+
+
+//pagina inicial
+
 body{
   font-family: 'Helvetica', sans-serif;
-  font-size: 16px;
-  line-height: 140%;
+  font-size: $text_pc;
+  line-height: 120%;
   background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#home {
+  height: 50px;
+  position: absolute;
+  margin-left: 2%;
+  margin-top: 2%;
 }
 
 a{
@@ -14,7 +51,7 @@ a{
 }
 
 #menu{
-    font-size: 18px;
+    font-size: $menu;
     font-weight: bold;
     display: flex;
     flex-direction: row;
@@ -32,67 +69,96 @@ a{
 //mudar a cor do traço no menu
 
 #line_cursos:hover{
-    border-bottom: solid 4px #13e1d6;}
+    border-bottom: solid 4px $azul;}
 
 #line_escola:hover{
-    border-bottom: solid 4px #fbb03b;}
+    border-bottom: solid 4px $laranja;}
 
 #line_eventos:hover{
-    border-bottom: solid 4px #5c16ff;}
+    border-bottom: solid 4px $roxo;}
 
 #line_contactos:hover{
-    border-bottom: solid 4px #e11e44;}
+    border-bottom: solid 4px $rosa;}
 
 #line_on_cursos{
-  border-bottom: solid 4px #13e1d6;}
+  border-bottom: solid 4px $azul;}
 
 #line_on_escola{
-  border-bottom: solid 4px #fbb03b;}
+  border-bottom: solid 4px $laranja;}
 
 #line_on_eventos{
-  border-bottom: solid 4px #5c16ff;}
+  border-bottom: solid 4px $roxo;}
 
 #line_on_contactos{
-  border-bottom: solid 4px #e11e44;}
+  border-bottom: solid 4px $rosa;}
 
 #traducao{
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin-right: 1%;
+  padding: 2%;
 }
 
-#traducao li{
-  margin-left: 5px;
+#traducao a{
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
 }
 
-#home {
-  height: 50px;
-  margin-left: 2%;
-  margin-top: 1%;
+
+#destaques{
+  margin: 0px  15% 10% 20%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-#overlay {
-    background-image: url(http://img.pandawhale.com/104933-dickbutt-meme-Imgur-dick-butt-yfgk.png);
-    height: 100vh;
-    width: 100vw;
-    background-size: cover;
-    background-position: center;
-    background-color: #ff00e0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index:9001;
+#imagem_destaque img{
+  width: 61vw;
+  height: 25vw;
 }
 
- .conteudo {
-    margin-left: 40px;
- }
+.evento{
+  margin: 2vw;
+}
+
+
+.titulo_destaque{
+  background-color: $laranja;
+  margin-top: 1vw;
+  width: 59vw;
+  padding: 1vw;
+}
+
+.titulo{
+  background-color: $laranja;
+  width: 15vw;
+  padding: 1vw;
+  margin-top: 1vw;
+}
+
+.imagem img{
+  width: 17vw;
+  height: 17vw;
+}
+
+.imagem{
+  position: relative;
+}
+
+.extra{
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  padding: 15px;
+  bottom: 0;
+  width: 100%;
+}
 
 
 //cursos
 
 h2 a{
+  font-size: $titulo_grande;
   font-weight: bold;
   color: #fff;
   padding: 5px;
@@ -100,21 +166,21 @@ h2 a{
 
 #lic{
   background-color: $roxo;
-  height: 250px;
-  width: 250px;
+  height: 20vw;
+  width: 20vw;
   position: absolute;
-  top: 15%;
-  right: 51%;
+  top: 10vw;
+  right: 51vw;
   padding: 10px;
 }
 
 #mes{
   background-color: $laranja;
-  height: 200px;
-  width: 200px;
+  height: 15vw;
+  width: 15vw;
   position: absolute;
-  top: 55%;
-  right: 51%;
+  top: 35vw;
+  right: 51vw;
   display: flex;
   align-items: flex-end;
   padding: 10px;
@@ -122,68 +188,200 @@ h2 a{
 
 #dou{
   background-color: $cinza;
-  height: 350px;
-  width: 350px;
+  height: 25vw;
+  width: 25vw;
   position: absolute;
-  top: 25%;
-  left: 51%;
+  top: 20vw;
+  left: 51vw;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   padding: 10px;
 }
 
+#lic:hover{
+  width: 22vw;
+  height: 22vw;
+  top: 8vw;
+}
+
+#mes:hover{
+  width: 17vw;
+  height: 17vw;
+}
+
+#dou:hover{
+  width: 27vw;
+  height: 27vw;
+}
+
 #cursos_lista {
   position: absolute;
   top: 100%;
-  margin-left: 30%;
+  margin-left: 29vw;
 }
 
   //lista de licenciaturas
 h3 {
+  color: #fff;
   font-size: 20px;
   font-weight: bold;
   padding: 10px;
-  background-color: #13e1d6;
   width: 400px;
   margin-top: 30px;
   margin-bottom: 20px;
 }
 
-.lista_escola {
- margin-left: 30%;
+#licenciaturas{
+  background-color: $roxo;
 }
+
+#mestrados{
+  background-color: $laranja;
+}
+
+#doutoramentos{
+  background-color: $cinza;
+}
+
+
+//eventos
+
+#eventos{
+  margin-left: 35%;
+  margin-right: 10%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#lista_eventos{
+   position: absolute;
+   margin-left: 20%;
+   margin-top: 25vh;
+}
+
 //escola
-
-.escola{
+h4{
+  font-weight: bold;
   font-size: 14pt;
-
-  line-height: 160%;
+  line-height: 170%;
 }
 
-/*.biblioteca:hover {
-  background-image: url(imagens/escola/biblioteca.svg);
-  background-repeat: no-repeat;
-  width: 200px;}
+#escola {
+ position: absolute;
+ margin-left: 20%;
+ margin-top: 25vh;
+}
 
-.secretaria:hover {
-  background-image: url(imagens/escola/secretaria.svg);}
+#icons{
+  position: absolute;
+  top: 35vh;
+  margin-left: 55vw;
+  width: 300px;
+  height: 300px;
+}
 
-.museu:hover {
-  background-image: url(imagens/escola/museu.svg);}
 
-.formacao_continua:hover {
-  background-image: url(imagens/escola/formacao_continua.svg);}
+//contactos
 
-.arquivo:hover {
-  background-image: url(imagens/escola/arquivo.svg);}
+iframe{
+  display: flex;
+  margin: 0 auto;
+  width: 50vw;
+  height: 35vw;
+}
 
-.servicos:hover {
-  background-image: url(imagens/escola/servicos.svg);}
+#contactos{
+  width: 205px;
+  margin-left: 20%;
+  padding: 25px;
+  background-color: $laranja;
+}
 
-.departamentos:hover {
-  background-image: url(imagens/escola/departamentos.svg);}
 
-.orgaos_gestao:hover {
-  background-image: url(imagens/escola/gestao.svg);}
-*/
+@media screen and (max-width: 960px) {
+  //ecras de tablets portrait
+
+  //cursos
+  #lic{
+    top: 20vw;
+  }
+
+  #mes{
+    top: 45vw;
+  }
+
+  #dou{
+    top: 30vw;
+  }
+
+  #lic:hover{
+    top: 18vw;
+  }
+
+  h2 a{
+    font-size: $titulo_grande_phone;
+  }
+
+}
+@media screen and (max-width: 765px) {
+  //telemoveis
+  #home {
+    height: 30px;
+    margin-left: 3%;
+    margin-top: 3%;
+  }
+
+  #traducao{
+    font-size: $menu_phone;
+    padding: 5%;
+  }
+
+  #menu{
+    bottom: 1%;
+    font-size: $menu_phone;
+  }
+
+  //cursos
+  #lic{
+    top: 30vw;
+  }
+
+  #mes{
+    top: 55vw;
+  }
+
+  #dou{
+    top: 40vw;
+  }
+
+  #lic:hover{
+    top: 28vw;
+  }
+
+  //escola
+
+  h4{
+    font-size: 11pt;
+  }
+
+  #icons{
+    top: 45vh;
+    width: 200px;
+    height: 200px;
+  }
+
+  //contactos
+  #contactos{
+    font-size: $text_phone;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  #icons{
+    display: none;
+  }
+
+}

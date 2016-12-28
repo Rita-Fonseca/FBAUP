@@ -7,16 +7,19 @@ $(document).ready(function(){
     console.log(bg)
 
     //mudar background image do body
-    $("body").css({
+    $('#icons').css({
       "background-image": "url("+bg+")"
     })
 
   })
 
+$(document).bind('mousewheel', function(e) {
+  hideOverlay();
+});
+
   $('#overlay').click(function() {
     hideOverlay();
   });
-});
 
 function hideOverlay() {
   if (!$('#overlay:visible').length)
@@ -24,9 +27,9 @@ function hideOverlay() {
   $('#overlay').fadeOut();
 }
 
-$(document).bind('mousewheel', function(e) {
-  hideOverlay();
-});
+function extra() {
+  document.getElementByClass("extra").style.display = "flex";
+};
 
 
 })
