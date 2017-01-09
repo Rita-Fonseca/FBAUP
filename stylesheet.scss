@@ -118,46 +118,31 @@ a{
   height: 25vw;
 }
 
-.evento{
-  margin: 2vw;
-}
-
-
 .titulo_destaque{
-  background-color: $laranja;
   margin-top: 1vw;
   width: 59vw;
-  padding: 1vw;
 }
 
 .titulo{
-  background-color: $laranja;
   width: 15vw;
-  padding: 1vw;
+  height: 60px;
   margin-top: 1vw;
 }
 
 .imagem img{
-  width: 17vw;
-  height: 17vw;
+  width: 14vw;
+  height: 14vw;
 }
 
 .imagem{
   position: relative;
 }
 
-.extra{
-  background-color: rgba(255, 255, 255, 0.8);
-  position: absolute;
-  padding: 15px;
-  bottom: 0;
-  width: 100%;
-}
 
 
 //cursos
 
-h2 a{
+#caixas_cursos{
   font-size: $titulo_grande;
   font-weight: bold;
   color: #fff;
@@ -248,7 +233,8 @@ h3 {
 //eventos
 
 #eventos{
-  margin-left: 35%;
+  margin-left: 20%;
+  margin-top: 15%;
   margin-right: 10%;
   display: flex;
   justify-content: center;
@@ -256,9 +242,34 @@ h3 {
 }
 
 #lista_eventos{
-   position: absolute;
-   margin-left: 20%;
-   margin-top: 25vh;
+   display: flex;
+   flex-direction: row;
+}
+
+#lista_eventos li{
+  padding: 3px;
+}
+
+
+
+.extra{
+  display: none;
+}
+
+.evento{
+  margin: 0px 1vw 5vw 0px;
+  border-right: solid 6px $rosa;
+  padding-right: 3vw;
+
+&:hover .extra{
+  display: block;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
 }
 
 //escola
@@ -286,42 +297,79 @@ h4{
 //contactos
 
 iframe{
-  display: flex;
-  margin: 0 auto;
-  width: 50vw;
-  height: 35vw;
+  height: 25vw;
+  width: 25vw;
+  position: absolute;
+  top: 10vw;
+  right: 45vw;
+  padding: 10px;
 }
 
 #contactos{
-  width: 205px;
+  width: 150px;
+  height: 150px;
   margin-left: 20%;
-  padding: 25px;
+  padding: 30px 15px 10px 25px;
+  background-color: $azul;
+  position: absolute;
+  top: 25vw;
+  left: 36vw;
+}
+
+.info_titulo{
+  font-weight: bold;
+  font-size: 9pt;
+  padding-top:10px;
+}
+
+#morada{
   background-color: $laranja;
+  width: 130px;
+  height: 130px;
+  margin-left: 20%;
+  padding: 35px 15px 5px 25px;
+  position: absolute;
+  top: 38vw;
+  right: 46vw;
 }
 
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1024px) {
   //ecras de tablets portrait
 
   //cursos
   #lic{
-    top: 20vw;
-  }
-
-  #mes{
-    top: 45vw;
-  }
-
-  #dou{
     top: 30vw;
   }
 
-  #lic:hover{
-    top: 18vw;
+  #mes{
+    top: 55vw;
   }
 
-  h2 a{
+  #dou{
+    top: 40vw;
+  }
+
+  #lic:hover{
+    top: 28vw;
+  }
+
+  #caixas_cursos{
     font-size: $titulo_grande_phone;
+  }
+
+  //contactos
+
+  #morada{
+    top: 53vw;
+  }
+
+  #contactos{
+    top: 40vw;
+  }
+
+  iframe{
+    top:25vw;
   }
 
 }
@@ -343,22 +391,6 @@ iframe{
     font-size: $menu_phone;
   }
 
-  //cursos
-  #lic{
-    top: 30vw;
-  }
-
-  #mes{
-    top: 55vw;
-  }
-
-  #dou{
-    top: 40vw;
-  }
-
-  #lic:hover{
-    top: 28vw;
-  }
 
   //escola
 
