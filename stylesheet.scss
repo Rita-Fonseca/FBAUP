@@ -8,7 +8,7 @@
     width: 100%;
     background-size: cover;
     background-position: center;
-    position: absolute;
+    position: fixed;
     top: auto;
     left: auto;
     z-index:9001;
@@ -120,7 +120,7 @@ a{
 }
 
 #imagem_destaque img{
-  width: 61vw;
+  width: 64vw;
   height: 25vw;
 }
 
@@ -238,25 +238,32 @@ h3 {
 
 //eventos
 
-#eventos{
-  margin-left: 20%;
-  margin-top: 15%;
-  margin-right: 10%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
 #lista_eventos{
    display: flex;
    flex-direction: row;
+   margin: 15% 16% 5vh 20%;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   padding: 20px;
+   background-color: $roxo;
 }
 
 #lista_eventos li{
   padding: 3px;
 }
 
+#destaque{
+  margin-bottom: 10vh;
+}
 
+#lista_eventos a{
+  color: #fff;
+}
+
+#lista_eventos a:hover{
+  color: $rosa;
+}
 
 .extra{
   display: none;
@@ -278,6 +285,15 @@ h3 {
 }
 }
 
+.evento .extra p {
+
+  margin-bottom: 10px;
+}
+
+.data_local{
+  padding: 5px;
+}
+
 //evento
 
 #apresentacao{
@@ -289,6 +305,27 @@ h3 {
   margin-left: 20%;
   background-color: $roxo;
   padding: 15px;
+}
+
+#texto_evento{
+  margin-left: 40vw;
+  margin-right: 20vw;
+}
+
+#info{
+  margin-left: 20vw;
+  display: block;
+}
+
+#mais{
+  background-color: $roxo;
+  padding: 10px;
+  width: 85px;
+  margin: 40px 0px 10vh 40vw;
+}
+
+#mais a{
+  color: #fff;
 }
 
 //escola
