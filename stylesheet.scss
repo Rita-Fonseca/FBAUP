@@ -235,6 +235,10 @@ h3 {
   background-color: $cinza;
 }
 
+#caixas_cursos a{
+  color: #fff;
+}
+
 
 //eventos
 
@@ -393,6 +397,14 @@ iframe{
 @media screen and (max-width: 1024px) {
   //ecras de tablets portrait
 
+h2{
+  font-size: 6pt;
+  line-height: 110%;
+}
+
+#caixas_cursos a{
+  font-size: 5pt;
+}
   //cursos
   #lic{
     top: 30vw;
